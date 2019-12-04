@@ -4,11 +4,13 @@ import "../styles/styles.scss"
 //import component
 import Header from "../components/header"
 import Banner from "../components/banner"
+import About from "../components/about"
 
 const IndexPage = () => (
   <div>
     <Header />
     <Banner />
+    <About />
   </div>
 )
 
