@@ -5,21 +5,14 @@ import Img from "gatsby-image"
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      vine: file(relativePath: { eq: "vine2.png" }) {
+      colibriRight: file(relativePath: { eq: "bird-4585450_1280.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      colibri: file(relativePath: { eq: "colibri.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      pigeon: file(relativePath: { eq: "pigeon-3303111_1280.png" }) {
+      colibriLeft: file(relativePath: { eq: "bird-158334_1280.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -34,14 +27,11 @@ const Banner = () => {
       <div className="container">
         <div className="row">
           <div className ="side-image left">
-            <Img fluid={data.colibri.childImageSharp.fluid} />
+            <Img fluid={data.colibriRight.childImageSharp.fluid} />
           </div>
           <div className="main-text">Rimma Akhmedyanova</div>
-          <div className="main-image">
-            <Img fluid={data.vine.childImageSharp.fluid} />
-          </div>
           <div className ="side-image right">
-            <Img fluid={data.pigeon.childImageSharp.fluid} />
+            <Img fluid={data.colibriLeft.childImageSharp.fluid} />
           </div>
         </div>
         <div className="scroll">
