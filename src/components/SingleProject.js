@@ -1,6 +1,6 @@
 
 import React from 'react';
-import ProjectText from './ProjectText';
+// import ProjectText from './ProjectText';
 import Img from 'gatsby-image';
 
 const SingleProject = ({title, text, webLink, gitHubLink, fluid, gif}) => {
@@ -31,4 +31,5 @@ const SingleProject = ({title, text, webLink, gitHubLink, fluid, gif}) => {
     </div>
   )
 };
+
 export default SingleProject;
