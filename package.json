@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Rimma's portfolio built with Gatsby",
   "version": "0.1.0",
   "author": "Rimma Akhmedyanova <rimmaakhmedyanova@gmail.com>",
   "dependencies": {
@@ -26,6 +26,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
+    "smooth-scroll": "^16.1.2",
     "smooth-scrollbar": "^8.5.0"
   },
   "devDependencies": {

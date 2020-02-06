@@ -52,7 +52,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className="projects">
+        <div className="projects" id="work">
           <div className="container">
             <div className="inner-projects">
               <h3>Recent Projects</h3>

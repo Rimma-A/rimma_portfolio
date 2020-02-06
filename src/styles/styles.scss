@@ -34,6 +34,22 @@ body {
     width: 768px;
     min-width: 768px;
   }
+  @media(max-width: 768px) {
+    width: 600px;
+    min-width: 600px;
+  }
+  @media(max-width: 600px) {
+    width: 414px;
+    min-width: 414px;
+  }
+  @media(max-width: 414px) {
+    width: 375px;
+    min-width: 375px;
+  }
+  @media(max-width: 375px) {
+    width: 320px;
+    min-width: 320px;
+  }
 }
 
 //Header
@@ -84,10 +100,10 @@ header {
   .row {
     position: relative;
     .main-text {
-      font-size: 5.8rem;
+      font-size: 3.9rem;
+      letter-spacing: 36px;
       line-height: 5.8rem;
       text-transform: uppercase;
-      letter-spacing: 42px;
       font-weight: 700;
       color: pink;
       position: absolute;
@@ -98,9 +114,18 @@ header {
       text-align: center;
       mix-blend-mode: difference;
       z-index: 9;
-      @media (max-width: 1440px) {
-        font-size: 4.4rem;
-        letter-spacing: 36px;
+      @media(max-width: 976px) {
+        font-size: 3rem;
+        letter-spacing: 26px;
+      }
+      @media(max-width: 768px) {
+        font-size: 2rem;
+        letter-spacing: 20px;
+      }
+      @media(max-width: 600px) {
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+        margin-top: 15px;
       }
     }
     .main-image {
@@ -165,25 +190,34 @@ header {
   padding: 48px 0;
   background: $grey;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
   .inner-about {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
     .content {
       width: 33%;
       @media (max-width: 1440px) {
         width: 40%;
       }
+      @media (max-width: 600px) {
+        width: 90%;
+      }
       h3 {
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 1.8rem;
+        font-size: 1rem;
         letter-spacing: 1.5px;
         margin: 0;
       }
       p {
-        font-size: 1rem;
-        line-height: 2rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
         font-weight: 300;
         margin: 40px 0 72px;
       }
@@ -200,21 +234,29 @@ header {
     }
     .image {
       width: 50%;
-      height: 1000px;
       position: relative;
       z-index: 7;
-      @media (max-width: 1440px) {
-        height: 800px;
-      }
       .center {
         position: absolute;
-        width: 460px;
         left:50%;
         top:50%;
         transform: translate(-50%,-50%);
         z-index: 4;
         @media (max-width: 1440px) {
+          width: 400px;
+        }
+        @media(max-width: 976px) {
           width: 360px;
+        }
+        @media(max-width: 768px) {
+          width: 300px;
+        }
+        @media(max-width: 600px) {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
         }
       }
     }
@@ -232,7 +274,7 @@ header {
       text-transform: uppercase;
       font-size: 1.8rem;
       letter-spacing: 1.5px;
-      margin: 0;
+      margin: 40px 0;
       text-align: center;
     }
     .projects-section {
@@ -245,39 +287,45 @@ header {
 
 //single-project
 .project-section {
-  margin: 12px 0;
-  width: 70%;
+  margin: 40px 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
   .image {
-    width: 40%;
-    height: 400px;
+    width: 55%;
     position: relative;
     z-index: 7;
     @media (max-width: 1440px) {
       height: 300px;
     }
+    @media (max-width: 600px) {
+      height: 200px;
+    }
     .center {
       position: absolute;
-      width: 460px;
       left:50%;
       top:50%;
       transform: translate(-50%,-50%);
       z-index: 4;
-      @media (max-width: 1440px) {
-        width: 360px;
-      }
+      width: 100%;
+
       img {
         padding:1px;
         border:1px solid #eeeeee;
+        width: 100%;
+        margin-bottom: 0;
       }
     }
   }
   .project-content {
-    width: 33%;
-    @media (max-width: 1440px) {
-      width: 40%;
+    width: 40%;
+    position: relative;
+    @media (max-width: 600px) {
+      width: 80%;
     }
     .title {
       h3 {
@@ -304,25 +352,23 @@ header {
       justify-content: center;
       .button {
       margin: 0 6px;
-      display:inline-block;
-      padding:0.35em 1.2em;
-      border:0.1em solid rgb(7, 160, 19);
-      margin:0 0.3em 0.3em 0;
-      border-radius:0.12em;
+      display: inline-block;
+      border: 1px solid rgb(7, 160, 19);
       box-sizing: border-box;
       text-decoration:none;
-      font-family:'Roboto',sans-serif;
-      font-weight:300;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
       color:rgb(7, 160, 19);
-      text-align:center;
+      text-align: center;
       transition: all 0.2s;
+      cursor: pointer;
       }
       .button:hover{
         color: $black;
         background-color:rgb(7, 160, 19);
       }
       @media all and (max-width:30em){
-        .button1{
+        .button{
         display:block;
         margin:0.4em auto;
         }
@@ -336,20 +382,19 @@ header {
   padding: 48px 0;
   background: $white;
   position: relative;
-  height: 35vh;
+  width: 100%;
   background-color: $grey;
   .inner-contactMe {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 100%;
     h3 {
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.8rem;
       letter-spacing: 1.5px;
-      margin: 0;
+     // margin: 0;
     }
     .link-row {
       width: 100%;
@@ -362,26 +407,6 @@ header {
       }
       .icon:hover {
         transform: scale(1.2);
-      }
-      .link {
-        margin: 0 20px;
-        display:inline-block;
-        padding:0.35em 1.2em;
-        border:0.1em solid #008CBA;;
-        margin:0 0.3em 0.3em 0;
-        border-radius:0.12em;
-        box-sizing: border-box;
-        text-decoration:none;
-        font-family:'Roboto',sans-serif;
-        font-weight:300;
-        color: $black;;
-        text-align:center;
-        transition: all 0.2s;
-        background-color: $white;
-      }
-      .link:hover{
-        color: $black;
-        background-color:#008CBA;
       }
     }
   }

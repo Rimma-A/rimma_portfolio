@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 
 const Header = () => (
@@ -6,13 +5,12 @@ const Header = () => (
     <div className="container">
       <div className="inner-header">
         <div className="logo">
-          <Link to="/">RIMMA</Link>
         </div>
         <div className="navigation">
           <nav>
-            <Link to="/about">About</Link>
-            <Link to="/work">Work</Link>
-            <Link to="/contact">Contact</Link>
+            <a data-scroll href="#about">About</a>
+            <a data-scroll href="/#work">Work</a>
+            <a data-scroll href="#contact">Contact</a>
           </nav>
         </div>
       </div>
